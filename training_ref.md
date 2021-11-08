@@ -34,3 +34,6 @@
 - Map/Set
 - Classes
 - Modules
+
+# to install typescript -
+> npm install -g typescript
