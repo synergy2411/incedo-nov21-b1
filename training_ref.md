@@ -99,3 +99,22 @@ Stencil - Custome Web Component
 Next - Full Stack
 Express/Koa/Hapi - Web app framework for Node
 Node - Platform for running JavaScript on Server-side
+
+
+# Angular CLI Tool (Better development experience)
+> npm install @angular/cli@10 -g
+> ng new <project-name>
+> ng new users-app
+> cd users-app -> npm install
+> npm start | ng serve
+
+> ng generate component <name> | ng g c <name>
+> ng generate directive <name> | ng g d <name>
+> ng generate pipe <name> | ng g p <name>
+> ng generate service <name> | ng g s <name>
+> ng generate module <name> | ng g m <name>
+
+> npm start -> ng serve
+
+# to install bootstrap
+- npm install bootstrap@4 

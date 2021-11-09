@@ -1,0 +1,16 @@
+<div class="container">
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col-3">
+        <img [src]="user.imageSrc" alt="bill gates images" class="rounded-circle img-fluid">
+      </div>
+      <div class="col-9">
+        <h4>{{ user.firstName }} {{ user.lastName }}</h4>
+        <p>Date of Birth : <span [innerText]="user.dob" ></span> </p>
+        <p>Income : <span [innerHTML]="user.income"></span></p>
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
