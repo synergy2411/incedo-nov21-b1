@@ -34,6 +34,68 @@
 - Map/Set
 - Classes
 - Modules
+- Decorators - Simple function with meta information :
+    : Classes - @Component() | @Directive() | @Pipe() | @Injectable() | @NgModule()
+    : Properties - @Input() | @Output()
+    : Methods - @HostListener()
+    : Parameters - @Optional() | @Inject()
+
+# Angular Building Blocks :
+- Component - ES6 Classes + @Component({})
+- Directives - ES6 Classes + @Directive({})
+- Pipes - ES6 Class + @Pipe({})
+- Services - ES6 Class + @Injectable()
+- Modules - ES6 Class + @NgModule()
 
 # to install typescript -
 > npm install -g typescript
+
+
+# What is Angular?
+- Creates Single Page App
+- 2 way data binding
+- Web based and mobile app (Ionic Framework)
+- JavaScript Framework
+- Written in TypeScript
+- Lazy loading (Webpack - module bundler)
+- Open Source
+- Component based architecture (reusable piece of code)
+- A client-side JavaScript Framework (Collection of Libraries)
+- Custom Elements <product-detail></product-detail>
+- Template / Model driven forms
+- Performant Apps - AOT Compiler
+- AoT : Ahead-of-time - 
+    : Faster App
+    : Efficient JavaScript
+    : "Tree-shaking" - removing unused from App
+    : lesser build size - reduced the final app size by 40%
+    : gets loaded faster on device/browser
+- JIT - Just-in-time - Browers
+- Typescript - tsc - transpile the code into JS
+- Remote Server call
+- Reactive programming (rxjs)
+- template writing
+- MVC pattern
+- Custom components etc
+
+
+
+Angular - >= v2 Latest ng Version; Superheroic Framework; Angular Universal (SSR)
+AngularJS - v1 - Library
+jQuery - DOM Manipulation, Ajax Calls, Animation
+React - light-weight, render the UI efficiently, Facebook Team, huge community Support
+    : State Management - redux, react-redux
+    : SPA - react-router-dom
+    : DOM interaction - react-dom
+    : Form Validation - formik
+    : XHR - axios, jQuery
+Vue - Evan You ; Template oriented, vuelidate, vuex, axios, jquery etc
+Knockout - MVVM Pattern, efficient 2 way data binding
+Backbone - client side MVC
+Polymer - Custom Web Component
+Stencil - Custome Web Component
+*Ember - Changing API very frequently
+
+Next - Full Stack
+Express/Koa/Hapi - Web app framework for Node
+Node - Platform for running JavaScript on Server-side

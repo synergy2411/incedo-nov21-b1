@@ -324,3 +324,41 @@
 // set.add("john")
 // console.log(set.size);
 
+
+
+
+
+
+
+
+
+
+
+// class have their own types
+class Foo{}
+class Bar{}
+
+class Bam{
+    constructor(foo : Foo, bar : Bar){}
+}
+
+new Bam(new Foo(), new Bar())
+
+
+// Custom Types
+interface Person{
+    firstName : string;
+    lastName : string;
+    age : number;
+}
+
+let p1 : Person = {
+    firstName : "Foo",
+    lastName : "Bar",
+    age : 32
+}
+
+
+
+
+
