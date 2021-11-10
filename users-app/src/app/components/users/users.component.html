@@ -3,12 +3,14 @@
   <li class="list-group-item">
     <div class="row">
       <div class="col-3">
-        <img [src]="user.imageSrc" alt="bill gates images" class="rounded-circle img-fluid">
+        <app-user-img [user]="user" (childEvent)="onMoreInfo($event)"></app-user-img>
       </div>
       <div class="col-9">
-        <h4>{{ user.firstName }} {{ user.lastName }}</h4>
-        <p>Date of Birth : <span [innerText]="user.dob" ></span> </p>
-        <p>Income : <span [innerHTML]="user.income"></span></p>
+        <app-user-info [user]="user">
+          <header>Header Info</header>
+          <main class="main-content">Main Content</main>
+          <footer>Footer Info</footer>
+        </app-user-info>
       </div>
     </div>
   </li>
