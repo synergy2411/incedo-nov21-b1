@@ -9,5 +9,5 @@ import { User } from 'src/app/model/user';
 export class UserInfoComponent {
 
   @Input() user : User;
-
+  tab = 1;
 }
