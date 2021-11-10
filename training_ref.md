@@ -118,3 +118,7 @@ Node - Platform for running JavaScript on Server-side
 
 # to install bootstrap
 - npm install bootstrap@4 
+
+# Component Types
+- Smart / Container - contains other components and/or businees logic
+- Dump / Presentational - receives the data from parent and creates the UI

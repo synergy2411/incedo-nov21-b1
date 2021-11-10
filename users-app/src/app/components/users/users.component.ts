@@ -1,22 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../../model/user';
+import { USER_DATA } from '../../model/mocks';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
-export class UsersComponent{
+export class UsersComponent implements OnInit{
 
-  user : User = {
-    firstName : "bill",
-    lastName: "gates",
-    dob : new Date('Jan 21, 1965'),
-    income : 50000,
-    isWorking : true,
-    company : "Microsoft",
-    imageSrc : "./assets/images/bill.jpg",
-    votes : 120
+  users : User[];
+
+  ngOnInit(){
+    this.users = USER_DATA;
   }
 
   onMoreInfo(usr : User){

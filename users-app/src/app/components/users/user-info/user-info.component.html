@@ -2,10 +2,14 @@
 <ng-content select=".main-content"></ng-content>
 <h4>{{ user.firstName }} {{ user.lastName }}</h4>
 <p>Date of Birth : <span [innerText]="user.dob" ></span> </p>
-<p>Income : <span [innerHTML]="user.income"></span></p>
+<p *ngIf="user.isWorking;else elseTemplate">Income : <span [innerHTML]="user.income"></span></p>
 <p>Total Votes : {{ user.votes }} <br>
   <input type="number" [value]="user.votes" (change)="user.votes=$event.target.value">
   <input type="number" [(ngModel)]="user.votes">
 </p>
+
+<ng-template #elseTemplate>
+  <p class="lead">Mr. {{ user.lastName }} is not working now.</p>
+</ng-template>
 
 <ng-content select="footer"></ng-content>
