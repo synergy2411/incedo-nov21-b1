@@ -1,3 +1,5 @@
+import {Comment } from './comment';
+
 export interface User {
   firstName: string;
   lastName: string;
@@ -7,4 +9,7 @@ export interface User {
   company: string;
   imageSrc: string;
   votes: number;
+  comments : Comment[]
 }
+
+

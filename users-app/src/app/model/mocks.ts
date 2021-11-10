@@ -8,7 +8,12 @@ export const USER_DATA : User[] = [{
   isWorking : true,
   company : "Microsoft",
   imageSrc : "./assets/images/bill.jpg",
-  votes : 120
+  votes : 120,
+  comments : [{
+    stars: 4,
+    body : "The great man",
+    author : "test@test.com"
+  }]
 },{
   firstName : "steve",
   lastName: "jobs",
@@ -17,7 +22,12 @@ export const USER_DATA : User[] = [{
   isWorking : false,
   company : "Apple",
   imageSrc : "./assets/images/steve.jpg",
-  votes : 130
+  votes : 130,
+  comments : [{
+    stars: 3,
+    body : "Great work",
+    author : "test@test.com"
+  }]
 },{
   firstName : "tim b",
   lastName: "lee",
@@ -26,5 +36,10 @@ export const USER_DATA : User[] = [{
   isWorking : true,
   company : "World Wide Web",
   imageSrc : "./assets/images/tim.jpg",
-  votes : 80
+  votes : 80,
+  comments : [{
+    stars: 5,
+    body : "The wise man",
+    author : "test@test.com"
+  }]
 }]
