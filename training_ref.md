@@ -122,3 +122,33 @@ Node - Platform for running JavaScript on Server-side
 # Component Types
 - Smart / Container - contains other components and/or businees logic
 - Dump / Presentational - receives the data from parent and creates the UI
+
+# Component Life Cycle
+# Directives
+- Structural Directives
+- Attributes Directives                         
+
+# Forms
+- Template Forms
+- Model / Reactive Forms 
+
+# Pipes
+- Builtin pipes
+- Custom Pipes
+
+# Services
+
+
+- Component : creates the UI
+- Directives : marker with some special meaning
+- Pipes : format the data on UI
+- Services : front-end business logic
+- Module : container for inter-related stuff
+
+
+arr = ['appple', 'banana', 'oranges]
+- Mutable Change
+arr.push('kiwi')
+
+- Immutable Change : Pure Pipes
+arr = ['apple', 'banana', 'oranges', 'kiwi']
