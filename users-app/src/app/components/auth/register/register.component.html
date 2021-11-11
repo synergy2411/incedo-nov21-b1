@@ -13,6 +13,16 @@
             <input type="text" class="form-control"
               name="username"
               [formControl]="username"/>
+              <div class="alert alert-danger"
+                [hidden]="username.valid || username.untouched">
+                <p>*Some problem with Username</p>
+                <div [hidden]="!username.hasError('required')">
+                  - Username is mandatory field
+                </div>
+                <div [hidden]="!username.hasError('email')">
+                  - Username must be in proper email format
+                </div>
+              </div>
           </div>
           <!-- Password -->
           <div class="form-group">
@@ -20,6 +30,18 @@
             <input type="password" name="password"
               class="form-control"
               [formControl]="password">
+              <div class="alert alert-danger" [hidden]="password.valid || password.untouched">
+                <p>* Some problem with password field</p>
+                <div [hidden]="!password.hasError('required')">
+                  - Password is mandatory field
+                </div>
+                <div [hidden]="!password.hasError('minlength')">
+                  - Password must have 6 characters
+                </div>
+                <div [hidden]="!password.hasError('hasExclamation')">
+                  - Password must have Exclamation mark
+                </div>
+              </div>
           </div>
           <!-- Buttons -->
           <div class="row">

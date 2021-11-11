@@ -152,3 +152,9 @@ arr.push('kiwi')
 
 - Immutable Change : Pure Pipes
 arr = ['apple', 'banana', 'oranges', 'kiwi']
+
+# Build reactive register form with following fields :
+- Drop-down (Country)
+- radio buttons (gender)
+- checkbox (Term & Conditions)
+- Confirm Password Field (text box)
