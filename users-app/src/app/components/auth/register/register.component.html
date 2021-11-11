@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="text-center">Register Form</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="registerForm">
+          <!-- Email -->
+          <div class="form-group">
+            <label for="username">Username : </label>
+            <input type="text" class="form-control"
+              name="username"
+              [formControl]="username"/>
+          </div>
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password : </label>
+            <input type="password" name="password"
+              class="form-control"
+              [formControl]="password">
+          </div>
+          <!-- Buttons -->
+          <div class="row">
+            <div class="col-6">
+              <button class="btn btn-primary btn-sm btn-block"
+                (click)="onRegister()"
+                [disabled]="registerForm.invalid">Register</button>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-warning btn-sm btn-block"
+                (click)="onReset()">Reset</button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
