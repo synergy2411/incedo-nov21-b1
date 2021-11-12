@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/services/data.service';
 import { User } from '../../model/user';
 // import { USER_DATA } from '../../model/mocks';
@@ -6,9 +7,10 @@ import { User } from '../../model/user';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  styleUrls: ['./users.component.css'],
+  // providers:  [DataService]
 })
-export class UsersComponent implements OnInit{
+export class UsersComponent implements OnInit, OnDestroy{
 
   users : User[];
   myDynamicClass = {'my-border' : true, 'my-feature' : false}
@@ -16,6 +18,8 @@ export class UsersComponent implements OnInit{
     'font-size' : '1.2em',
     'border' : '2px red solid'
   }
+
+  unSub$ : Subscription;
 
   onToggleClasses(){
     this.myDynamicClass['my-border'] = !this.myDynamicClass['my-border']
@@ -26,14 +30,24 @@ export class UsersComponent implements OnInit{
 
   ngOnInit(){
     // this.users = USER_DATA;
-    this.dataService.getUserData()
+    this.unSub$ = this.dataService.getUserData()
       .subscribe(response => {
         this.users = response['userdata']
       })
+    // this.users = this.dataService.getUserData()
+  }
+
+  getCounter(){
+    return this.dataService.counter;
   }
 
   onMoreInfo(usr : User){
     alert(`Mr. ${usr.firstName} is working with ${usr.company}!!!`)
   }
+
+  ngOnDestroy(){
+    this.unSub$.unsubscribe();
+  }
+
 
 }

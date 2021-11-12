@@ -79,6 +79,10 @@
 - Custom components etc
 
 
+# ngrx - primarily for State Management in Angular
+
+
+
 
 Angular - >= v2 Latest ng Version; Superheroic Framework; Angular Universal (SSR)
 AngularJS - v1 - Library
