@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -13,6 +14,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [       // Custom Components | Directives | Pipes
@@ -27,9 +29,10 @@ import { RegisterComponent } from './components/auth/register/register.component
   imports: [            // Built-in as well as Custom Modules
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],        // Register the Service
+  providers: [DataService],        // Register the Service
   bootstrap: [AppComponent]
 })
 export class AppModule { }

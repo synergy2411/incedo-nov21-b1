@@ -158,3 +158,26 @@ arr = ['apple', 'banana', 'oranges', 'kiwi']
 - radio buttons (gender)
 - checkbox (Term & Conditions)
 - Confirm Password Field (text box)
+
+
+
+# Services
+- Observables : another way of reactive programming/ async JS
+- HTTP Client
+
+# Routing - SPA
+
+
+# HttpClientModule
+- Unlock the HttpClientModule
+- Inject the HttpClient Class
+- Make XHR Call
+
+
+# Promise
+- Producer Code 
+- Consumer Code - then()
+
+# Observable 
+- Producer code : http call
+- Consumer Code - subscribe()

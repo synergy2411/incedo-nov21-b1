@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 import { User } from '../../model/user';
-import { USER_DATA } from '../../model/mocks';
+// import { USER_DATA } from '../../model/mocks';
 
 @Component({
   selector: 'app-users',
@@ -21,8 +22,14 @@ export class UsersComponent implements OnInit{
     this.myDynamicClass['my-feature'] = !this.myDynamicClass['my-feature']
   }
 
+  constructor(private dataService : DataService){}
+
   ngOnInit(){
-    this.users = USER_DATA;
+    // this.users = USER_DATA;
+    this.dataService.getUserData()
+      .subscribe(response => {
+        this.users = response['userdata']
+      })
   }
 
   onMoreInfo(usr : User){
