@@ -185,3 +185,18 @@ arr = ['apple', 'banana', 'oranges', 'kiwi']
 # Observable 
 - Producer code : http call
 - Consumer Code - subscribe()
+
+
+# Http Calls - GET | POST | DELETE | PATCH -> https://jsonplaceholder.typicode.com/posts
+# Notes App - {id, title, body}
+- HTTP Calls
+- Get only 10 posts/notes
+- Notes Component -> Notes Service -> XHR Call -> https://jsonplaceholder.typicode.com/posts
+
+
+
+# What is Single Page App?
+- don't reload the browser
+- minimal changes on UI
+- more interactive
+- low network bandwidth usages
