@@ -208,6 +208,21 @@ arr = ['apple', 'banana', 'oranges', 'kiwi']
 
 - Routing : 30
 - Modules : 30
-- Testing : 30
 - Performance Optimization Techniques : 15
 - App Deploy - Firebase : 15
+- Testing : 30
+
+
+# onPush runs the angular digest cycle (updating the model) on immutable change
+
+# to build Angular App
+- npm run build | ng build --prod
+
+
+# App Deployment on Firebase
+- npm install -g firebase-tools
+- firebase login
+- firebase init
+- firebase deploy
+
+# Deployed URL -> https://incedo-users-app.web.app
