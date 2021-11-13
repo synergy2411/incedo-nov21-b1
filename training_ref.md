@@ -200,3 +200,14 @@ arr = ['apple', 'banana', 'oranges', 'kiwi']
 - minimal changes on UI
 - more interactive
 - low network bandwidth usages
+
+# Load the landing modules in first load
+# Rest all modules should be loaded lazily
+
+
+
+- Routing : 30
+- Modules : 30
+- Testing : 30
+- Performance Optimization Techniques : 15
+- App Deploy - Firebase : 15

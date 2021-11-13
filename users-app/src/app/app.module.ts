@@ -19,6 +19,9 @@ import { DataService } from './services/data.service';
 import { ObservableDemoComponent } from './components/observable-demo/observable-demo.component';
 import { APP_ROUTES } from './app.routes';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductsComponent } from './components/products/products.component';
+import { OverviewComponent } from './components/products/overview/overview.component';
+import { SpecificationComponent } from './components/products/specification/specification.component';
 
 @NgModule({
   declarations: [       // Custom Components | Directives | Pipes
@@ -30,7 +33,10 @@ import { HeaderComponent } from './components/header/header.component';
     LoginComponent,
     RegisterComponent,
     ObservableDemoComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductsComponent,
+    OverviewComponent,
+    SpecificationComponent
   ],
   imports: [            // Built-in as well as Custom Modules
     BrowserModule,

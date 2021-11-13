@@ -1,0 +1,15 @@
+<p class="display-4">Product Component Loaded</p>
+
+<ul>
+  <li>
+    <a [routerLink]="['overview', 99]">Overview</a>
+  </li>
+  <li>
+    <a [routerLink]="['specification']" [queryParams]="{'desc':'Awesome product'}">Specification</a>
+  </li>
+</ul>
+
+
+<hr>
+
+<router-outlet></router-outlet>
