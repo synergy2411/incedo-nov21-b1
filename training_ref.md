@@ -226,3 +226,12 @@ arr = ['apple', 'banana', 'oranges', 'kiwi']
 - firebase deploy
 
 # Deployed URL -> https://incedo-users-app.web.app
+
+# Share the given challenge (deployed URL) by Sunday 12:00PM on below email -
+- synergy2411@outlook.com
+
+
+# Testing
+- Jasmine : Framework for JavaScript App Testing
+- Karma : Test runner
+- Protector : end-to-end testing

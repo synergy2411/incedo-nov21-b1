@@ -1,31 +1,56 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { ComponentFixture, TestBed } from "@angular/core/testing"
+import { BrowserModule } from "@angular/platform-browser"
+import { AppComponent } from "./app.component"
+import { DataService } from "./services/data.service"
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
+describe("App Component Suite", () => {
+
+  // setup & tear-down
+  beforeEach(async ()=>{
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+      imports : [BrowserModule],
+      providers : [DataService],
+      declarations : [AppComponent]
+    }).compileComponents()
+  })
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  let fixture : ComponentFixture<AppComponent>;
+  let app : AppComponent;
 
-  it(`should have as title 'test-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('test-app');
-  });
+  beforeEach(()=>{
+    fixture = TestBed.createComponent(AppComponent);
+    app = fixture.componentInstance;
+  })
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('test-app app is running!');
-  });
-});
+  it("Should create the AppComponent", () => {
+    expect(app).toBeTruthy()
+  })
+
+  it("Should have username property as 'Foo'", () => {
+    expect(app.username).toEqual('Foo')
+  })
+
+  it("Should create the template from username", () => {
+    let el = fixture.nativeElement
+    fixture.detectChanges()
+    expect(el.querySelector('h3').textContent).toContain('Hello Foo');
+  })
+
+})
+
+
+
+
+
+
+// describe("Test Suite 1", ()=>{
+
+//   it("Should be truthy", () => {
+//     expect(true).toBeTruthy()
+//   })
+
+//   it("Should equal to 1", () => {
+//     expect(1).toEqual(1)
+//   })
+
+// })
